@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background-color: #f5f5f5;
+}
+
+img {
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+}
+
+.imgsmall {
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+}
+
+/* styles.css */
+.grid-item {
+  position: relative;
+}
+
+.grid-item {
+  position: relative;
+}
+
+.grid-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/path/to/overlay.png') no-repeat center center;
+  background-size: cover;
+  opacity: 0.5;
+}
+
+.blend{
+  mix-blend-mode: exclusion;
+  width: 300px;
+  height: 300px;
+}
+.wow{
+  mix-blend-mode: exclusion;
+  width: 600px;
+  height: 200px;
+}
+
+.blomst{
+  mix-blend-mode: exclusion;
+  width: 250px;
+  height: 250px;
+}
+
+.blomster{
+  mix-blend-mode: exclusion;
+  width: 300px;
+  height: 300px;
+  transform: scale(1.5); /* Initial scale */
+  right: 0;
+  overflow: hidden;
+  margin-top: 25px;
+}
+
+/* styles.css */
+.parallax {
+  width: 100%;
+}
+
+.container {
+  position: relative;
+}
+
+.balloon {
+  display: inline-block;
+  position: relative;
+  top: -15px;
+  left: -15px;
+}
+
+.balloon-img {
+  filter: grayscale(1);
+  height: 25px;
+  width: 25px;
+  border: solid white;
+  filter: drop-shadow(0 0 0.15rem grey);
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  position: relative; /* Ensure it respects z-index */
+}
+
+.popup {
+  position: absolute;
+  top: -20px;
+  left: -17px;
+  background-color: rgba(237, 237, 237, 0.9);
+  padding: 10px;
+  padding-left: 60px;
+  filter: drop-shadow(0 0 0.15rem grey);
+  text-align: left;
+  width: 500px; /* Adjust width as needed */
+  transform: scale(0.9); /* Initial scale */
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition */
+  z-index: 1; /* Ensure it's below the image */
+  pointer-events: none; /* Make sure the popup doesn't capture pointer events */
+  font-size: medium;
+  font-weight: 200;
+  line-height: 20px;
+}
+
+.balloon:hover {
+  z-index: 10; /* Ensure the balloon is above others */
+}
+
+.balloon:hover .balloon-img {
+  animation: scaleAndFloat 3s infinite ease-in-out; /* Combine scale and float in one animation */
+  filter: grayscale(0); /* Remove grayscale on hover */
+  z-index: 50; /* Ensure it's above the popup */
+}
+
+.balloon:hover .popup {
+  display: block;
+  transform: scale(0.9); /* Scale to full size */
+  opacity: 1; /* Show popup */
+  z-index: 1; /* Ensure it's below the image */
+  animation: float 3s infinite ease-in-out; /* Apply the float animation */
+}
+
+@keyframes scaleAndFloat {
+  0%, 100% {
+    transform: scale(1.7) translateY(0);
+  }
+  50% {
+    transform: scale(1.7) translateY(-5px);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+b, strong {
+  font-weight: medium !important; /* Use !important to override any conflicting styles */
+}
+
+.sted{
+left:350px;
+top: 400px;
+}
+
+.tid{
+left:950px;
+top: 550px;
+}
