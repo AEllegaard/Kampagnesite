@@ -17,7 +17,7 @@ const Home = () => {
             <p className='font-pp font-thin text-3xl'>Blågårds Plads, <br /> Copenhagen N</p>
         </div>
         <div className="tid fixed">
-            <p className='font-pp font-thin text-3xl'>25. - 29. <br /> Juni 2024</p>
+            <p className='font-pp font-thin text-3xl'>7:30PM <br />25. - 29. <br /> Juni 2024</p>
         </div>
 
         <div data-rellax-speed="-2" className="rellax flex w-screen justify-center -ml-10 -mt-10">
